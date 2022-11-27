@@ -82,6 +82,14 @@
             "browserTarget": "eldebaran3000:build"
           }
         },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {
+            "baseHref": "https://sicclem.github.io/eldebaran3000/",
+            "name": "SicClem",
+            "email": "clement.siche@gmail.com"
+          }
+        },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
