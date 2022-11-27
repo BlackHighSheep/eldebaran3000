@@ -14,7 +14,7 @@ export class StockbarComponent implements OnInit {
   foodProgress: number;
   ironProgress: number;
 
-  constructor(private gameService : GameService, private timeService : TimeSpeedService) {
+  constructor(public gameService : GameService, public timeService : TimeSpeedService) {
    };
 
   ngOnInit() {

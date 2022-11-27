@@ -10,15 +10,15 @@ import { BuildingService } from 'src/app/shared/building.service';
   styleUrls: ['./set-case.component.scss']
 })
 export class SetCaseComponent implements OnInit {
-  
+
 
 
   @Input() displayCell : Case;
 
   building : Building
-  
 
-  constructor(private gameService : GameService) { }
+
+  constructor(public gameService : GameService) { }
 
   ngOnInit() {
    }
@@ -49,14 +49,14 @@ export class SetCaseComponent implements OnInit {
   }
 
   destroyBuilding() {
-    this.gameService.freeWorkers += this.gameService.cases[this.gameService.cases.indexOf(this.displayCell)].building.nbWorkers 
+    this.gameService.freeWorkers += this.gameService.cases[this.gameService.cases.indexOf(this.displayCell)].building.nbWorkers
     this.gameService.cases[this.gameService.cases.indexOf(this.displayCell)] = new Case (false,false, this.displayCell.xPosition, this.displayCell.yPosition)
     this.gameService.getCapacity()
     if (this.gameService.freeWorkers > 0 ) {
       this.gameService.minWorkerColor = "green";
       this.gameService.iron = this.gameService.iron + this.displayCell.building.deleteIron;
     };
-    
+
   };
 
 }

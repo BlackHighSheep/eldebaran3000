@@ -19,8 +19,8 @@ export class BuildingComponent implements OnInit {
     unshowProperties: boolean= false;
 
 
-    constructor(private gameService : GameService,
-                private buildingService : BuildingService) { }
+    constructor(public gameService : GameService,
+                public buildingService : BuildingService) { }
 
     ngOnInit() {};
 

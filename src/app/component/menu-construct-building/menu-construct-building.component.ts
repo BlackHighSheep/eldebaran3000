@@ -14,9 +14,9 @@ import { GameService } from 'src/app/shared/game.service';
 export class MenuConstructBuildingComponent implements OnInit {
     buildings: Building[];
     clickMenu: boolean;
-      
-    constructor(private buildingService: BuildingService,
-                private gameService : GameService) { }
+
+    constructor(public buildingService: BuildingService,
+                public gameService : GameService) { }
 
 
     ngOnInit() {
@@ -26,7 +26,7 @@ export class MenuConstructBuildingComponent implements OnInit {
         this.buildingService.clickAppear();
         this.buildings = this.buildingService.buildings;
     }
-   
-  
+
+
 
 }

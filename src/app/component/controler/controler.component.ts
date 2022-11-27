@@ -10,8 +10,8 @@ export class ControlerComponent implements OnInit {
 
   vitesseTemps: number;
   clockSpeed: number;
-  
-  constructor(private timeSpeedService: TimeSpeedService) { }
+
+  constructor(public timeSpeedService: TimeSpeedService) { }
 
   ngOnInit() {
     this.getClockSpeed();
@@ -35,8 +35,8 @@ export class ControlerComponent implements OnInit {
   fastTime(){
     this.clockSpeed = this.timeSpeedService.clockSpeed;
     this.timeSpeedService.fastForward();
-    
-    
+
+
   }
-  
+
 }

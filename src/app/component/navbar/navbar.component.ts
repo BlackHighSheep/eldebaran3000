@@ -10,7 +10,7 @@ import { TimeSpeedService } from '../timer/time-speed.service';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor(private timeService: TimeSpeedService) { }
+  constructor(public timeService: TimeSpeedService) { }
 
   ngOnInit() {  }
 

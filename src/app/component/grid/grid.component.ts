@@ -9,10 +9,10 @@ import { GameService } from 'src/app/shared/game.service';
   styleUrls: ['./grid.component.css']
 })
 export class GridComponent implements OnInit {
-  
+
   cases: Case[] = [];
-  
-  constructor(private gameService : GameService) {}
+
+  constructor(public gameService : GameService) {}
 
   ngOnInit() {
     this.caseBuilder()

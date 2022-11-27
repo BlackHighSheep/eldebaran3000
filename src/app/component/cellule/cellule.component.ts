@@ -9,13 +9,13 @@ import { GameService } from 'src/app/shared/game.service';
   styleUrls: ['./cellule.component.css']
 })
 export class CelluleComponent implements OnInit {
-  
+
   settingMode : boolean = false;
 
 
   @Input() displayCell : Case;
 
-  constructor(private gameService : GameService) { };
+  constructor(public gameService : GameService) { };
 
   ngOnInit() {
   };
@@ -31,7 +31,7 @@ export class CelluleComponent implements OnInit {
   onBuildMode_placement(cell : Case) {
     if (this.gameService.buildingToConstruct === undefined && this.gameService.cases[this.gameService.cases.indexOf(cell)].isOccuped === true){
       this.settingMode = !this.settingMode
-    } 
+    }
     else if (this.gameService.buildingToConstruct && this.gameService.cases[this.gameService.cases.indexOf(cell)].isOccuped === false){
       this.gameService.onBuildMode_Build(cell)
     }

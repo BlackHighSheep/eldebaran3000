@@ -10,7 +10,7 @@ export class MenuProductionSpeedComponent implements OnInit {
 
   clickMenu: boolean = false;
 
-  constructor(private service: GameService) { }
+  constructor(public service: GameService) { }
 
   ngOnInit() {
   };
