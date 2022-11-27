@@ -22,11 +22,12 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3
+      uses: actions/setup-node@v3      
+      env: 
+        GH_TOKEN: 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
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - run: npm ci
     - run: npm run deploy
-      env: 
-        GH_TOKEN: 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
+
