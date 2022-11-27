@@ -29,4 +29,4 @@ jobs:
     - run: npm ci
     - run: npm run deploy
       env: 
-        GH_TOKEN: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
+        GH_TOKEN: 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
